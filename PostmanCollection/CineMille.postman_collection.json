@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "fde6e4a7-33d3-4964-8935-bbb69ad58785",
+		"name": "CineMille",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25786855"
+	},
+	"item": [
+		{
+			"name": "login e register",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user1\",\r\n    \"email\": \"user1@ex.it\",\r\n    \"password\": \"PW_user1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzM3Mzc3NCwiZXhwIjoxNjkwOTczNzc0fQ.aiLlLreAQOQa385YN-oWKi80LFNcwQQeQORbgrgM_090c9XIS_O__noWZa2rxICb"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"email\": \"admin@ex.it\",\r\n    \"password\": \"PW_admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get all utenti",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/user"
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/user/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "findByUsername",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/user/username/ad"
+					},
+					"response": []
+				},
+				{
+					"name": "findByEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/user/email/@e"
+					},
+					"response": []
+				},
+				{
+					"name": "dellById [da controllare]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/delete/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sale",
+			"item": [
+				{
+					"name": "updateSaleCSV",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/elencoSale.csv"
+								}
+							]
+						},
+						"url": "localhost:8080/api/sala/saveCSV"
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/sala"
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/sala/id/3"
+					},
+					"response": []
+				},
+				{
+					"name": "getByTipoSala",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/sala/tipoSala/sala all'aperto"
+					},
+					"response": []
+				},
+				{
+					"name": "getByCapienza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/sala/capienza/250"
+					},
+					"response": []
+				},
+				{
+					"name": "getByTecnologiaSala",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/sala/tecnologiaSala/isense"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/sala/delete/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "film",
+			"item": [
+				{
+					"name": "updateFilmCSV",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzQ0NjE1NiwiZXhwIjoxNjkxMDQ2MTU2fQ.KDqy8747sWGadtzGUjZ43rv7tuNbDtSSvQd48sW-GP-x9sF0gBMfzBV-jNfqNXS3"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/elencoFilm.csv"
+								}
+							]
+						},
+						"url": "localhost:8080/api/film/saveCSV"
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film"
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film/id/20"
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitolo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film/titolo/HP1"
+					},
+					"response": []
+				},
+				{
+					"name": "getByAutore",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film/autore/uno"
+					},
+					"response": []
+				},
+				{
+					"name": "getBydataUscita",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film/dataUscita/2023-06-22"
+					},
+					"response": []
+				},
+				{
+					"name": "getByRange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film/dateRange/2023-06-22/2023-06-25"
+					},
+					"response": []
+				},
+				{
+					"name": "getByGenere",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/film/genere/storico"
+					},
+					"response": []
+				},
+				{
+					"name": "dellById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/film/delete/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "programmazione",
+			"item": [
+				{
+					"name": "updateProgCSV",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/elencoProgrammazione.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/programmazione/saveCSV",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"programmazione",
+								"saveCSV"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gettAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/programmazione"
+					},
+					"response": []
+				},
+				{
+					"name": "gettById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/programmazione/id/2"
+					},
+					"response": []
+				},
+				{
+					"name": "gettByInizioRange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/programmazione/dateRangeInizio/2023-06-20/2023-06-28"
+					},
+					"response": []
+				},
+				{
+					"name": "gettByFineRange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/api/programmazione/dateRangeFine/2023-06-28/2023-07-05"
+					},
+					"response": []
+				},
+				{
+					"name": "delById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/api/programmazione/delete/2"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleC5pdCIsImlhdCI6MTY4NzUyMTAxNCwiZXhwIjoxNjkxMTIxMDE0fQ.VDJ01qPQZS5oBuvvRwKndBEo55VS92mqELcORCABTZZTfv1z3V057J5QsgdQBnlm"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

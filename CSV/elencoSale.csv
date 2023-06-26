@@ -1,0 +1,12 @@
+codiceidentificativo;tipoSala;tecnologiaSala;capienza
+A1;sala al chiuso;isense;50
+A2;sala all'aperto;isense;50
+A3;sala in teatro;isense;125
+A4;sala al chiuso;isense;125
+A5;sala all'aperto;isense;125
+A6;sala in teatro;isense;125
+B1;sala al chiuso;3D;200
+B2;sala all'aperto;3D;200
+B3;sala in teatro;3D;250
+I1;sala al chiuso;imax;125
+I2;sala all'aperto;imax;250

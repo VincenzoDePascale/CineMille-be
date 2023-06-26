@@ -26,3 +26,7 @@ Per continuare, segui le istruzioni presenti nella parte frontend. Puoi trovare 
 
 è presente nella cartella "PostmanCollection" l'intera collezione di endPoint creati per questo progetto, non tutti sono stati implementati nella parte frontend.
 
+## Tecnologie utilizzate
+
+- java, spring boot
+- postgrSQL

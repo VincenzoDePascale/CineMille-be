@@ -86,6 +86,7 @@ public class SalaController {
 	}
 	
 	@PostMapping("/saveCSV")
+	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@PreAuthorize("isAuthenticated()")
 	public ResponseEntity<?> saveSalaByCSV(@RequestParam("file") MultipartFile data) {
 	    try {

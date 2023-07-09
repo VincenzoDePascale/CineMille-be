@@ -44,7 +44,7 @@ public class AuthRunner implements ApplicationRunner {
 		if(userRepository.findAll().size() == 0) {
 			User user = new User();
 			user.setUsername("admin");
-			user.setEmail("admin@exex.com");
+			user.setEmail("admin@ex.it");
 			user.setPassword(passwordEncoder.encode("PW_admin"));
 			Role admin = roleRepository.findById(1l).get();			
 			user.getRoles().add(admin);

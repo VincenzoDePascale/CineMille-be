@@ -94,6 +94,7 @@ public class ProgrammazioneController {
 		}
 		
 		@PostMapping("/saveCSV")
+		//@PreAuthorize("hasRole('ROLE_ADMIN')")
 		@PreAuthorize("isAuthenticated()")
 		public ResponseEntity<?> saveProgrammazioneByCSV(@RequestParam("file") MultipartFile data) {
 		    try {

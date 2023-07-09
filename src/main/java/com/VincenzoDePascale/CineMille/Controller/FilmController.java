@@ -39,7 +39,7 @@ public class FilmController {
 	//GET
 	
 	@GetMapping
-	@PreAuthorize("isAuthenticated()")
+	//@PreAuthorize("isAuthenticated()")
 	public ResponseEntity<List<Film>> getAll() {	
 		return new ResponseEntity<List<Film>>(filmService.findAll(), HttpStatus.OK);
 	}
@@ -96,6 +96,7 @@ public class FilmController {
 	}
 	
 	@PostMapping("/saveCSV")
+	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@PreAuthorize("isAuthenticated()")
 	public ResponseEntity<?> saveFilmByCSV(@RequestParam("file") MultipartFile data) {
 	    try {
